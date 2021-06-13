@@ -76,14 +76,16 @@ window.alert('位置情報取得に失敗しました。');
 map.on('locationfound', onLocationFound);
 map.on('locationerror', onLocationError);
 
-<!-- フィルター用
+
 var Map_BaseLayer = {
+<!-- フィルター用
 "地理院地図 標準": t_std,
 "地理院地図 淡色": t_pale,
 "地理院地図 オルソ": t_ort,
+-->
 "OpenStreetMap 標準": o_std
 };
--->
+
 
 <!-- スケール？
 L.control.scale({ imperial: false, maxWidth: 300 }).addTo(map);
