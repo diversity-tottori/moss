@@ -91,7 +91,14 @@ L.control.scale({ imperial: false, maxWidth: 300 }).addTo(map);
 L.control.layers(Map_BaseLayer, null, { collapsed: false }).addTo(map);
 */
 
-L.marker([35.5162271398842, 134.17334012890518]).addTo(map).bindPopup('<img src="./image/moss1.jpg" style="width:500px;"><br />' + "moss1",{maxWidth:"500",closeOnClick: true});
+// コケマーカーの見た目を定義
+  var my_icon = L.divIcon({
+    html: '<div>コケ！</div>',
+    className: 'station-marker',  // CSSのクラス名。指定しないとデフォルトのleaflet-div-iconというクラスがつき、background: #fff;border: 1px solid #666;というスタイルがつきます
+    iconSize: [75, 40] // iconSizeを指定しないと、マーカーの中心でなく、左上が指定した座標に来るようになります
+  });
+    
+L.marker([35.5162271398842, 134.17334012890518], {icon: my_icon}).addTo(map).bindPopup('<img src="./image/moss1.jpg" style="width:500px;"><br />' + "moss1",{maxWidth:"500",closeOnClick: true});
 
     </script>
 
