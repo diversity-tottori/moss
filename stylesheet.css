@@ -9,10 +9,13 @@ z-index: 0;
 height: 100%;
 }
 
-
-
-div.-marker { background: orange;
-  text-align: center; color: white;
-  font-size: 20px;
-  border-radius: 5px;
-  box-shadow: 10px 10px 10px rgba(0,0,0,0.4);}
+.btn--orange,
+a.btn--orange {
+  color: #fff;
+  background-color: #eb6100;
+}
+.btn--orange:hover,
+a.btn--orange:hover {
+  color: #fff;
+  background: #f56500;
+}
