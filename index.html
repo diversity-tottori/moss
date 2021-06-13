@@ -94,7 +94,7 @@ L.control.layers(Map_BaseLayer, null, { collapsed: false }).addTo(map);
 // アイコンの設定
 var mossIcon = L.icon({
     iconUrl: 'moss.png',
-    iconSize:     [40, 60], // size of the icon
+    iconSize: [40, 60], // size of the icon
 });
 
 L.marker([35.5162271398842, 134.17334012890518], {icon: mossIcon}).addTo(map).bindPopup('<img src="./image/moss1.jpg" style="width:500px;"><br />' + "moss1",{maxWidth:"500",closeOnClick: true});
