@@ -51,14 +51,14 @@ var comment;
 
 map.locate({setView: true, maxZoom: 20});
    
-<!-- アイコンの設定 -->
+// アイコンの設定
 var humanIcon = L.icon({
     iconUrl: 'human.png',
     iconSize:     [40, 60], // size of the icon
     popupAnchor:  [0, -25] // point from which the popup should open relative to the iconAnchor
 });
     
-<!-- 現在地の出力 -->
+// 現在地の出力
 function onLocationFound(e) {
 'use strict';
 mapMarker = L.marker(e.latlng, {icon: humanIcon}).addTo(map);
@@ -74,20 +74,20 @@ window.alert('位置情報取得に失敗しました。');
 map.on('locationfound', onLocationFound);
 map.on('locationerror', onLocationError);
 
-<!--
+/*
 var Map_BaseLayer = {
 "地理院地図 標準": t_std,
 "地理院地図 淡色": t_pale,
 "地理院地図 オルソ": t_ort,
 "OpenStreetMap 標準": o_std
 };
--->
+*/
 
 L.control.scale({ imperial: false, maxWidth: 300 }).addTo(map);
     
-<!--
+/*
 L.control.layers(Map_BaseLayer, null, { collapsed: false }).addTo(map);
--->
+*/
 
     </script>
 
